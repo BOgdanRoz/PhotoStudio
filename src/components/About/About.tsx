@@ -1,4 +1,3 @@
-import ImagePlaceholder from '../ImagePlaceholder/ImagePlaceholder'
 import styles from './About.module.css'
 
 function About() {
@@ -6,23 +5,34 @@ function About() {
     <section id="about" className={styles.about} aria-labelledby="about-title">
       <div className={styles.inner}>
         <div className={styles.media}>
-          <ImagePlaceholder
-            label="Заглушка: портрет для розділу про студію"
-            ratio="4 / 5"
-            className={styles.primaryImage}
-          />
-          <ImagePlaceholder
-            label="Заглушка: деталь кадру"
-            ratio="4 / 3"
-            className={styles.secondaryImage}
-          />
+          <div className={styles.primary}>
+            <img
+              className="photo"
+              src="/images/about-main.jpg"
+              alt="Портрет жінки в фактурному жакеті при різкому світлі"
+              loading="lazy"
+              width={1200}
+              height={1500}
+            />
+          </div>
+          <div className={styles.secondary}>
+            <img
+              className="photo"
+              src="/images/about-detail.jpg"
+              alt="Жінка в рожевому жакеті на темному фоні"
+              loading="lazy"
+              width={1200}
+              height={1500}
+            />
+          </div>
         </div>
 
         <div className={styles.content}>
+          <p className="eyebrow">04 — Про нас</p>
           <h2 id="about-title" className={styles.title}>
             Більше, ніж <em>просто фотостудія.</em>
           </h2>
-          <p className={styles.text}>
+          <p className={styles.lead}>
             Solène — це простір, де естетика, світло та люди зустрічаються, щоб
             створювати справжні історії.
           </p>

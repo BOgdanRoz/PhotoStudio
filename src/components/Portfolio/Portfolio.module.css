@@ -10,12 +10,13 @@
 .header {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
   margin-bottom: var(--space-lg);
 }
 
 .title {
   font-size: var(--text-3xl);
+  max-width: 18ch;
 }
 
 .subtitle {
@@ -24,12 +25,16 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-md);
   align-items: start;
 }
 
-/* Asymmetric rhythm: the wide tile spans two columns on desktop */
+.frame {
+  overflow: hidden;
+  background-color: var(--color-placeholder);
+}
+
 .tall,
 .square,
 .wide {
@@ -38,8 +43,7 @@
 
 @media (min-width: 600px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .wide {
@@ -48,8 +52,19 @@
 }
 
 @media (min-width: 900px) {
+  .header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  .subtitle {
+    max-width: 36ch;
+  }
+
   .grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--gutter);
     grid-auto-flow: dense;
   }
@@ -58,6 +73,7 @@
     grid-column: span 2;
   }
 
+  /* Staggered rhythm: every second tall tile drops down */
   .tall:nth-child(3n + 2) {
     margin-top: var(--space-xl);
   }

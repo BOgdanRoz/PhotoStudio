@@ -4,6 +4,7 @@
 
 .inner {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-lg);
   width: min(100% - 2 * var(--gutter), var(--container-max));
   margin-inline: auto;
@@ -44,13 +45,23 @@
 
 .gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: var(--space-sm);
   align-items: start;
 }
 
+.frame {
+  overflow: hidden;
+  background-color: var(--color-placeholder);
+}
+
 .large {
   grid-row: span 2;
+}
+
+.small,
+.wide {
+  min-width: 0;
 }
 
 .wide {
@@ -59,7 +70,7 @@
 
 @media (min-width: 900px) {
   .inner {
-    grid-template-columns: 1fr 1.4fr;
+    grid-template-columns: minmax(0, 1fr) 1.4fr;
     gap: var(--gutter);
     align-items: center;
   }
