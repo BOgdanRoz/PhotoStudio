@@ -50,7 +50,7 @@ function Contact() {
           </dl>
         </div>
 
-        <div className={styles.media}>
+        <div className={`${styles.media} media-zoom`}>
           <img
             className="photo"
             src="/images/contact.jpg"

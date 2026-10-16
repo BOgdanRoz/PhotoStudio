@@ -30,7 +30,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className={styles.media}>
+        <div className={`${styles.media} media-zoom`}>
           <img
             className="photo"
             src="/images/hero-portrait.jpg"

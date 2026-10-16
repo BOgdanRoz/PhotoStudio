@@ -5,7 +5,7 @@ function About() {
     <section id="about" className={styles.about} aria-labelledby="about-title">
       <div className={styles.inner}>
         <div className={styles.media}>
-          <div className={styles.primary}>
+          <div className={`${styles.primary} media-zoom`}>
             <img
               className="photo"
               src="/images/about-main.jpg"
@@ -15,7 +15,7 @@ function About() {
               height={1500}
             />
           </div>
-          <div className={styles.secondary}>
+          <div className={`${styles.secondary} media-zoom`}>
             <img
               className="photo"
               src="/images/about-detail.jpg"
