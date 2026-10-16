@@ -1,5 +1,5 @@
 .hero {
-  padding-block: var(--space-lg) var(--section-space);
+  padding-block: var(--space-md) var(--space-lg);
 }
 
 .inner {
@@ -84,6 +84,12 @@
 @media (min-width: 900px) {
   .inner {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-    gap: var(--space-xl);
+    gap: var(--gutter);
+  }
+
+  /* Fit the photo into the first screen instead of a tall 4:5 block */
+  .media {
+    aspect-ratio: auto;
+    height: min(74vh, 680px);
   }
 }
