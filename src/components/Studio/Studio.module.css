@@ -1,5 +1,11 @@
 .studio {
   padding-block: var(--section-space);
+  background-color: var(--color-charcoal);
+  color: var(--color-bg);
+}
+
+.studio :global(.eyebrow) {
+  color: var(--color-accent);
 }
 
 .inner {
@@ -22,7 +28,7 @@
 }
 
 .text {
-  color: var(--color-text-muted);
+  color: var(--color-accent);
 }
 
 .cta {
@@ -31,8 +37,8 @@
   justify-content: center;
   min-height: 48px;
   padding: var(--space-xs) var(--space-lg);
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-bg);
+  color: var(--color-charcoal);
   font-size: var(--text-sm);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
@@ -40,7 +46,7 @@
 }
 
 .cta:hover {
-  background-color: var(--color-charcoal);
+  background-color: var(--color-white);
 }
 
 .gallery {

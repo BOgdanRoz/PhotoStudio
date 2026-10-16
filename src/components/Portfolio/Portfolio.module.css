@@ -1,5 +1,6 @@
 .portfolio {
   padding-block: var(--section-space);
+  background-color: var(--color-white);
 }
 
 .inner {

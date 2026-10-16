@@ -1,6 +1,6 @@
 .about {
   padding-block: var(--section-space);
-  border-top: 1px solid var(--color-border);
+  background-color: var(--color-stone);
 }
 
 .inner {
@@ -33,7 +33,7 @@
   width: 52%;
   justify-self: end;
   margin-top: calc(-1 * var(--space-xl) * 0.6);
-  border: 8px solid var(--color-bg);
+  border: 8px solid var(--color-stone);
 }
 
 .content {
