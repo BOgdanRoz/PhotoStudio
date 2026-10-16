@@ -1,4 +1,3 @@
-import ImagePlaceholder from '../ImagePlaceholder/ImagePlaceholder'
 import { site } from '../../data/site'
 import styles from './Hero.module.css'
 
@@ -32,7 +31,14 @@ function Hero() {
         </div>
 
         <div className={styles.media}>
-          <ImagePlaceholder label="Заглушка: головне фото студії" ratio="4 / 5" />
+          <img
+            className="photo"
+            src="/images/hero-portrait.jpg"
+            alt="Портрет жінки у світлій сорочці на темному фоні"
+            width={1600}
+            height={2000}
+            fetchPriority="high"
+          />
         </div>
       </div>
     </section>

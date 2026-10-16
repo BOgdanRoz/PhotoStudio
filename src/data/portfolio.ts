@@ -1,18 +1,43 @@
-// Заглушки замість фотографій: замінити на дозволені для портфоліо знімки.
+// Фото з Pexels (ліцензія Pexels, безкоштовне використання). Список джерел: docs/photo-credits.md
 
 export type PortfolioSize = 'tall' | 'wide' | 'square'
 
 export interface PortfolioItem {
   id: string
+  src: string
   alt: string
   size: PortfolioSize
 }
 
 export const portfolio: PortfolioItem[] = [
-  { id: 'p1', alt: 'Заглушка: портрет у світлі', size: 'tall' },
-  { id: 'p2', alt: 'Заглушка: натюрморт з листям', size: 'square' },
-  { id: 'p3', alt: 'Заглушка: fashion-образ у чорному', size: 'tall' },
-  { id: 'p4', alt: 'Заглушка: інтер’єр студії', size: 'square' },
-  { id: 'p5', alt: 'Заглушка: крупний план обличчя', size: 'wide' },
-  { id: 'p6', alt: 'Заглушка: драпірування тканини', size: 'square' },
+  {
+    id: 'p1',
+    src: '/images/portfolio-01.jpg',
+    alt: 'Жінка торкається прозорої тканини біля вікна в теплому світлі',
+    size: 'tall',
+  },
+  {
+    id: 'p2',
+    src: '/images/portfolio-02.jpg',
+    alt: 'Портрет із тіньовим візерунком мережива на обличчі',
+    size: 'square',
+  },
+  {
+    id: 'p3',
+    src: '/images/portfolio-03.jpg',
+    alt: 'Жінка в чорній сукні на темному тлі',
+    size: 'tall',
+  },
+  {
+    id: 'p4',
+    src: '/images/portfolio-04.jpg',
+    alt: 'Студійний простір із арочним вікном і плетеним табуретом',
+    size: 'square',
+  },
+  {
+    id: 'p5',
+    src: '/images/portfolio-05.jpg',
+    alt: 'Жінка з поглядом крізь напівпрозору тканину',
+    size: 'wide',
+  },
 ]

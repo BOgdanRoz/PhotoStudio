@@ -1,4 +1,3 @@
-import ImagePlaceholder from '../ImagePlaceholder/ImagePlaceholder'
 import { site } from '../../data/site'
 import styles from './Contact.module.css'
 
@@ -52,7 +51,14 @@ function Contact() {
         </div>
 
         <div className={styles.media}>
-          <ImagePlaceholder label="Заглушка: фото для розділу контактів" ratio="4 / 5" />
+          <img
+            className="photo"
+            src="/images/contact.jpg"
+            alt="Жінка торкається обличчя на темному задимленому фоні"
+            loading="lazy"
+            width={1200}
+            height={1500}
+          />
         </div>
       </div>
     </section>

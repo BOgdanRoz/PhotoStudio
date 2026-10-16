@@ -4,6 +4,7 @@
 
 .inner {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-lg);
   width: min(100% - 2 * var(--gutter), var(--container-max));
   margin-inline: auto;
@@ -76,11 +77,13 @@
 
 .media {
   width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
 }
 
 @media (min-width: 900px) {
   .inner {
-    grid-template-columns: 1fr 1.1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
     gap: var(--space-xl);
   }
 }

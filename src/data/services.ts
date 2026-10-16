@@ -6,6 +6,7 @@ export interface Service {
   description: string
   price: string
   image: string
+  imageAlt: string
 }
 
 export const services: Service[] = [
@@ -14,27 +15,31 @@ export const services: Service[] = [
     title: 'Індивідуальні фотосесії',
     description: 'Портрети, fashion та editorial-зйомки для ваших унікальних історій.',
     price: 'від 1200 грн/год',
-    image: 'Заглушка: індивідуальна фотосесія',
+    image: '/images/service-individual.jpg',
+    imageAlt: 'Жінка в шкіряному жакеті сидить на дерев’яному стільці',
   },
   {
     id: 'family',
     title: 'Сімейні фотосесії',
     description: 'Особливі моменти з вашими близькими в атмосфері студії.',
     price: 'від 2500 грн',
-    image: 'Заглушка: сімейна фотосесія',
+    image: '/images/service-family.jpg',
+    imageAlt: 'Батьки з маленькою дитиною позують на бежевому фоні',
   },
   {
     id: 'rental',
     title: 'Оренда студії',
     description: 'Простір, світло та обладнання для ваших творчих проєктів.',
     price: 'від 1000 грн/год',
-    image: 'Заглушка: оренда студії',
+    image: '/images/service-rental.jpg',
+    imageAlt: 'Студія з софітами та світлим фоном',
   },
   {
     id: 'commercial',
     title: 'Комерційний контент',
     description: 'Предметна зйомка, lookbook та контент для брендів і соцмереж.',
     price: 'від 4000 грн',
-    image: 'Заглушка: комерційна зйомка',
+    image: '/images/service-commercial.jpg',
+    imageAlt: 'Косметичний тюбик на бежевому м’якому текстилі',
   },
 ]
