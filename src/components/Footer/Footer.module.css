@@ -1,0 +1,27 @@
+.footer {
+  padding-block: var(--space-lg);
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm) var(--space-lg);
+  width: min(100% - 2 * var(--gutter), var(--container-max));
+  margin-inline: auto;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.copy {
+  font-size: var(--text-sm);
+  color: var(--color-light-gray);
+}
