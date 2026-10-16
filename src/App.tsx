@@ -1,4 +1,5 @@
 import Header from './components/Header/Header'
+import SideRails from './components/SideRails/SideRails'
 import Hero from './components/Hero/Hero'
 import Portfolio from './components/Portfolio/Portfolio'
 import Services from './components/Services/Services'
@@ -13,6 +14,7 @@ function App() {
       <a href="#main" className="skip-link">
         Перейти до вмісту
       </a>
+      <SideRails />
       <Header />
       <main id="main">
         <Hero />
