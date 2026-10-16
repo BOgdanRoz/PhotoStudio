@@ -1,6 +1,7 @@
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Portfolio from './components/Portfolio/Portfolio'
+import Services from './components/Services/Services'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <main id="main">
         <Hero />
         <Portfolio />
+        <Services />
       </main>
     </>
   )
