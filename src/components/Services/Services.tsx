@@ -28,7 +28,7 @@ function Services() {
 
               <p className={styles.price}>{service.price}</p>
 
-              <div className={styles.thumb}>
+              <div className={`${styles.thumb} media-zoom`}>
                 <img
                   className="photo"
                   src={service.image}

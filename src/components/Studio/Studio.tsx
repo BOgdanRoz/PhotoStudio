@@ -60,7 +60,7 @@ function Studio() {
         <ul className={styles.gallery}>
           {studioPhotos.map((photo) => (
             <li key={photo.src} className={photo.className}>
-              <div className={styles.frame} style={{ aspectRatio: photo.ratio }}>
+              <div className={`${styles.frame} media-zoom`} style={{ aspectRatio: photo.ratio }}>
                 <img
                   className="photo"
                   src={photo.src}

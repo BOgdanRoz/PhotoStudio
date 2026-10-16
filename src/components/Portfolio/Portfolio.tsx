@@ -24,7 +24,7 @@ function Portfolio() {
         <ul className={styles.grid}>
           {portfolio.map((item) => (
             <li key={item.id} className={styles[item.size]}>
-              <div className={styles.frame} style={{ aspectRatio: ratioBySize[item.size] }}>
+              <div className={`${styles.frame} media-zoom`} style={{ aspectRatio: ratioBySize[item.size] }}>
                 <img
                   className="photo"
                   src={item.src}
