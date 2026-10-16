@@ -1,4 +1,5 @@
 import Header from './components/Header/Header'
+import Hero from './components/Hero/Hero'
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
         Перейти до вмісту
       </a>
       <Header />
-      <main id="main" />
+      <main id="main">
+        <Hero />
+      </main>
     </>
   )
 }
