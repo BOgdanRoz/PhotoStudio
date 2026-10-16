@@ -9,22 +9,33 @@
 }
 
 .inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-lg);
   width: min(100% - 2 * var(--gutter), var(--container-max));
   margin-inline: auto;
 }
 
-.content {
+/* Heading and intro sit on one row so the gallery starts right below */
+.head {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
 }
 
 .title {
   font-size: var(--text-3xl);
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
 }
 
 .text {
@@ -61,10 +72,7 @@
   background-color: var(--color-placeholder);
 }
 
-.large {
-  grid-row: span 2;
-}
-
+.large,
 .small,
 .wide {
   min-width: 0;
@@ -75,13 +83,40 @@
 }
 
 @media (min-width: 900px) {
-  .inner {
-    grid-template-columns: minmax(0, 1fr) 1.4fr;
+  .head {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
     gap: var(--gutter);
-    align-items: center;
   }
 
+  .aside {
+    max-width: 36ch;
+  }
+
+  /* 12-column rhythm: tall photo on the left, two squares and a wide frame on the right */
   .gallery {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: var(--gutter);
+  }
+
+  .large {
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 2;
+  }
+
+  .small:nth-child(2) {
+    grid-column: 7 / span 3;
+    grid-row: 1;
+  }
+
+  .small:nth-child(3) {
+    grid-column: 10 / span 3;
+    grid-row: 1;
+  }
+
+  .wide {
+    grid-column: 7 / span 6;
+    grid-row: 2;
   }
 }
