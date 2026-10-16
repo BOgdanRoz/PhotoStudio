@@ -1,0 +1,54 @@
+.rails {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(28px, 3vw, 48px);
+  background-image: radial-gradient(circle, var(--color-taupe) 1px, transparent 1.5px);
+  background-size: 14px 14px;
+  opacity: 0.5;
+  /* Fade the dots out toward the top and bottom of the viewport */
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
+}
+
+/* Thin hairline on the inner edge, echoing the section dividers */
+.rail::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--color-accent);
+  opacity: 0.6;
+}
+
+.left {
+  left: 0;
+}
+
+.left::after {
+  right: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.right::after {
+  left: 0;
+}
+
+/* Only show on wide screens, where the margins are wide enough to hold the pattern */
+@media (min-width: 1200px) {
+  .rails {
+    display: block;
+  }
+}
