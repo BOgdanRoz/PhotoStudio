@@ -1,0 +1,16 @@
+.placeholder {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-placeholder);
+  color: var(--color-text-muted);
+}
+
+.label {
+  position: absolute;
+  inset: auto var(--space-sm) var(--space-sm);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  line-height: 1.4;
+}

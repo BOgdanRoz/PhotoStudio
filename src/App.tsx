@@ -1,8 +1,11 @@
 function App() {
   return (
-    <main>
-      
-    </main>
+    <>
+      <a href="#main" className="skip-link">
+        Перейти до вмісту
+      </a>
+      <main id="main" />
+    </>
   )
 }
 
