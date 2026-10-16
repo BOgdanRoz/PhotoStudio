@@ -1,0 +1,54 @@
+:root {
+  /* Palette: base colors from CLAUDE.md */
+  --color-white: #ffffff;
+  --color-sand: #f4f1ec;
+  --color-stone: #e6e2dc;
+  --color-taupe: #bdaf9e;
+  --color-charcoal: #1f1f1f;
+  --color-black: #000000;
+  --color-gray: #777777;
+  --color-light-gray: #d9d9d9;
+
+  /* Semantic colors */
+  --color-bg: var(--color-sand);
+  --color-surface: var(--color-white);
+  --color-text: var(--color-charcoal);
+  /* Darker than #777 so body text keeps at least 4.5:1 contrast on sand */
+  --color-text-muted: #5c5c5c;
+  --color-accent: var(--color-taupe);
+  --color-border: var(--color-light-gray);
+  --color-placeholder: var(--color-stone);
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --text-2xl: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+  --text-3xl: clamp(2.5rem, 1.8rem + 3.2vw, 4.5rem);
+  --text-hero: clamp(2.75rem, 1.6rem + 5vw, 6rem);
+
+  --tracking-label: 0.14em;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: clamp(4rem, 3rem + 5vw, 8rem);
+
+  /* Layout */
+  --container-max: 1280px;
+  --gutter: clamp(1.25rem, 0.5rem + 3vw, 3rem);
+  --section-space: clamp(4rem, 3rem + 4vw, 7rem);
+  --header-height: 4.5rem;
+
+  /* Shape and motion */
+  --radius: 0;
+  --transition-base: 200ms ease;
+  --focus-ring: 2px solid var(--color-charcoal);
+}
